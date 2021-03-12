@@ -530,7 +530,8 @@ const routes = [
             { path: 'movies', component: _movies_movies_component__WEBPACK_IMPORTED_MODULE_3__["MoviesComponent"] },
             { path: 'listMovies', component: _load_more_load_more_component__WEBPACK_IMPORTED_MODULE_7__["LoadMoreComponent"] },
             { path: 'moviesNews', component: _pagination_pagination_component__WEBPACK_IMPORTED_MODULE_6__["PaginationComponent"] },
-            { path: 'movie/:id', component: _single_movie_single_movie_component__WEBPACK_IMPORTED_MODULE_4__["SingleMovieComponent"] }
+            { path: 'movie/:id', component: _single_movie_single_movie_component__WEBPACK_IMPORTED_MODULE_4__["SingleMovieComponent"] },
+            { path: '**', component: _base_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseComponent"] }
         ]
     },
 ];
@@ -1595,7 +1596,7 @@ class MoviesComponent {
     }
 }
 MoviesComponent.ɵfac = function MoviesComponent_Factory(t) { return new (t || MoviesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_service_movie_service__WEBPACK_IMPORTED_MODULE_2__["MovieService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngxs_store__WEBPACK_IMPORTED_MODULE_3__["Store"])); };
-MoviesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MoviesComponent, selectors: [["app-movies"]], decls: 10, vars: 3, consts: [[1, "cont-header", "mt-5"], [1, "overly", "h-100", "d-flex", "align-items-center", "text-center"], [1, "text-center", "w-100"], [1, "container", "px-0", "mt-3"], [1, "row"], ["class", "col-md-4 mb-3", 4, "ngFor", "ngForOf"], ["class", "col-md-12 text-center", 4, "ngIf"], [1, "text-center"], ["class", "button py-2 rounded-pill px-5", 3, "click", 4, "ngIf"], [1, "col-md-4", "mb-3"], [1, "position-relative", 3, "ngStyle"], [1, "position-absolute", "p-3", "d-flex", "flex-column", "align-items-start", "justify-content-end", 2, "background", "linear-gradient(to bottom, transparent, rgba(0,0,0,1))", "top", "0", "bottom", "0", "left", "0", "right", "0"], [1, "text-white", "p-1", "px-2", "mb-2", 2, "background-color", "#272E69"], [1, "h6"], [1, "text-white", 2, "line-height", "1.6"], [1, "mt-2"], [1, "pl-2", "text-white", "mr-2", 2, "border-left", "3px solid #272E69"], [1, "col-md-12", "text-center"], ["role", "status", 1, "spinner-border", "mx-auto", "text-center"], [1, "sr-only"], [1, "button", "py-2", "rounded-pill", "px-5", 3, "click"]], template: function MoviesComponent_Template(rf, ctx) { if (rf & 1) {
+MoviesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MoviesComponent, selectors: [["app-movies"]], decls: 10, vars: 3, consts: [[1, "cont-header", "mt-5"], [1, "overly", "h-100", "d-flex", "align-items-center", "text-center"], [1, "text-center", "w-100"], [1, "container", "mt-3", "mb-5"], [1, "row"], ["class", "col-md-4 mb-3", 4, "ngFor", "ngForOf"], ["class", "col-md-12 text-center", 4, "ngIf"], [1, "text-center"], ["class", "button py-2 rounded-pill px-5", 3, "click", 4, "ngIf"], [1, "col-md-4", "mb-3"], [1, "position-relative", 3, "ngStyle"], [1, "position-absolute", "p-3", "d-flex", "flex-column", "align-items-start", "justify-content-end", 2, "background", "linear-gradient(to bottom, transparent, rgba(0,0,0,1))", "top", "0", "bottom", "0", "left", "0", "right", "0"], [1, "text-white", "p-1", "px-2", "mb-2", 2, "background-color", "#272E69"], [1, "h6"], [1, "text-white", 2, "line-height", "1.6"], [1, "mt-2"], [1, "pl-2", "text-white", "mr-2", 2, "border-left", "3px solid #272E69"], [1, "col-md-12", "text-center"], ["role", "status", 1, "spinner-border", "mx-auto", "text-center"], [1, "sr-only"], [1, "button", "py-2", "rounded-pill", "px-5", 3, "click"]], template: function MoviesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h2", 2);
@@ -2020,7 +2021,7 @@ class LoadMoreComponent {
     }
     ngOnInit() {
         this.load(this.pageNumber);
-        for (let index = 1; index < 11; index++) {
+        for (let index = 1; index < 8; index++) {
             this.pages.push(index);
         }
     }
@@ -2048,7 +2049,7 @@ class LoadMoreComponent {
     }
 }
 LoadMoreComponent.ɵfac = function LoadMoreComponent_Factory(t) { return new (t || LoadMoreComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core_service_movie_service__WEBPACK_IMPORTED_MODULE_2__["MovieService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_ngxs_store__WEBPACK_IMPORTED_MODULE_3__["Store"])); };
-LoadMoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LoadMoreComponent, selectors: [["app-load-more"]], decls: 23, vars: 3, consts: [[1, "cont-header", "mt-5"], [1, "overly", "h-100", "d-flex", "align-items-center", "text-center"], [1, "text-center", "w-100"], [1, "container"], [1, "row", "px-0", "mt-3"], ["class", "col-md-4 mb-3", 4, "ngFor", "ngForOf"], ["class", "col-md-12 text-center", 4, "ngIf"], ["aria-label", "Page navigation example", 1, "mx-auto", "text-center"], [1, "pagination", "mx-auto", "text-center"], [1, "page-item"], ["aria-label", "Previous", 1, "page-link", 3, "click"], ["aria-hidden", "true"], [1, "sr-only"], ["class", "page-item ", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], ["aria-label", "Next", 1, "page-link", 3, "click"], [1, "col-md-4", "mb-3"], [1, "position-relative", 3, "ngStyle"], [1, "position-absolute", "p-3", "d-flex", "flex-column", "align-items-start", "justify-content-end", 2, "background", "linear-gradient(to bottom, transparent, rgba(0,0,0,1))", "top", "0", "bottom", "0", "left", "0", "right", "0"], [1, "text-white", "p-1", "px-2", "mb-2", 2, "background-color", "#272E69"], [1, "h6"], [1, "text-white", 2, "line-height", "1.6"], [1, "mt-2"], [1, "pl-2", "text-white", "mr-2", 2, "border-left", "3px solid #272E69"], [1, "col-md-12", "text-center"], ["role", "status", 1, "spinner-border", "mx-auto", "text-center"], [1, "page-item", 3, "ngClass", "click"], [1, "page-link"]], template: function LoadMoreComponent_Template(rf, ctx) { if (rf & 1) {
+LoadMoreComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: LoadMoreComponent, selectors: [["app-load-more"]], decls: 23, vars: 3, consts: [[1, "cont-header", "mt-5"], [1, "overly", "h-100", "d-flex", "align-items-center", "text-center"], [1, "text-center", "w-100"], [1, "container", "mb-5"], [1, "row", "mt-3"], ["class", "col-md-4 mb-3", 4, "ngFor", "ngForOf"], ["class", "col-md-12 text-center", 4, "ngIf"], ["aria-label", "Page navigation example", 1, "mx-auto", "text-center"], [1, "pagination", "mx-auto", "text-center"], [1, "page-item"], ["aria-label", "Previous", 1, "page-link", 3, "click"], ["aria-hidden", "true"], [1, "sr-only"], ["class", "page-item ", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], ["aria-label", "Next", 1, "page-link", 3, "click"], [1, "col-md-4", "mb-3"], [1, "position-relative", 3, "ngStyle"], [1, "position-absolute", "p-3", "d-flex", "flex-column", "align-items-start", "justify-content-end", 2, "background", "linear-gradient(to bottom, transparent, rgba(0,0,0,1))", "top", "0", "bottom", "0", "left", "0", "right", "0"], [1, "text-white", "p-1", "px-2", "mb-2", 2, "background-color", "#272E69"], [1, "h6"], [1, "text-white", 2, "line-height", "1.6"], [1, "mt-2"], [1, "pl-2", "text-white", "mr-2", 2, "border-left", "3px solid #272E69"], [1, "col-md-12", "text-center"], ["role", "status", 1, "spinner-border", "mx-auto", "text-center"], [1, "page-item", 3, "ngClass", "click"], [1, "page-link"]], template: function LoadMoreComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h2", 2);
@@ -2183,6 +2184,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', loadChildren: () => Promise.resolve(/*! import() */).then(__webpack_require__.bind(null, /*! ./home/home.module */ "ct+p")).then(m => m.HomeModule) },
+    { path: '**', redirectTo: '/home', pathMatch: 'prefix' }
 ];
 class AppRoutingModule {
 }
